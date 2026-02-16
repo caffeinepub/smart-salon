@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Dark luxury theme colors */
+        --background: 0.08 0.02 240; /* #0B0F19 dark blue-black */
+        --foreground: 1 0 0; /* #FFFFFF white */
+        --card: 0.12 0.02 240;
+        --card-foreground: 1 0 0;
+        --popover: 0.12 0.02 240;
+        --popover-foreground: 1 0 0;
+        --primary: 0.75 0.15 85; /* #D4AF37 gold */
+        --primary-foreground: 0.08 0.02 240;
+        --secondary: 0.20 0.02 240;
+        --secondary-foreground: 1 0 0;
+        --muted: 0.18 0.02 240;
+        --muted-foreground: 0.70 0.01 240; /* #B0B3B8 light grey */
+        --accent: 0.75 0.15 85; /* gold accent */
+        --accent-foreground: 0.08 0.02 240;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 1 0 0;
+        --border: 0.25 0.02 240;
+        --input: 0.25 0.02 240;
+        --ring: 0.75 0.15 85;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        --background: 0.08 0.02 240;
+        --foreground: 1 0 0;
+        --card: 0.12 0.02 240;
+        --card-foreground: 1 0 0;
+        --popover: 0.12 0.02 240;
+        --popover-foreground: 1 0 0;
+        --primary: 0.75 0.15 85;
+        --primary-foreground: 0.08 0.02 240;
+        --secondary: 0.20 0.02 240;
+        --secondary-foreground: 1 0 0;
+        --muted: 0.18 0.02 240;
+        --muted-foreground: 0.70 0.01 240;
+        --accent: 0.75 0.15 85;
+        --accent-foreground: 0.08 0.02 240;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.08 0.02 240;
+        --border: 0.25 0.02 240;
+        --input: 0.25 0.02 240;
+        --ring: 0.75 0.15 85;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-foreground;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        @apply text-muted-foreground;
+        line-height: 1.7;
+    }
+}
+
+@layer utilities {
+    .text-gold {
+        color: oklch(0.75 0.15 85);
+    }
+    
+    .bg-gold {
+        background-color: oklch(0.75 0.15 85);
+    }
+    
+    .border-gold {
+        border-color: oklch(0.75 0.15 85);
+    }
+}

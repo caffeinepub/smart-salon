@@ -1,0 +1,8 @@
+{
+  "frontend/src/index.css": "Global styles implementing the dark luxury theme with OKLCH color tokens for Smart Salon (dark background #0B0F19, gold accent #D4AF37, white headings, light grey text) and modern typography.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Smart Salon's luxury design tokens including gold color, Inter font family, custom border radii, and luxury shadow utilities.",
+  "frontend/src/App.tsx": "Root application component that renders the LandingPage with dark mode enabled.",
+  "frontend/src/pages/LandingPage.tsx": "Complete single-page landing page for Smart Salon featuring hero with brand icon, updated about section with provided description, features, how-it-works, benefits, real app screenshots in phone frames, and footer with privacy policy link to GitHub.",
+  "frontend/index.html": "HTML entry point with SEO meta description, favicon, and app icon links for Smart Salon landing page.",
+  "frontend/DEPLOYMENT.md": "Deployment and domain guidance document explaining free Internet Computer canister URL hosting, custom domain connection options, costs, and realistic constraints for Smart Salon app."
+}

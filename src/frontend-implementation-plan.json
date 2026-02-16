@@ -1,0 +1,141 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Smart Salon landing page content, assets, and metadata integration",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Replace About section paragraph with the provided Smart Salon short description verbatim while keeping the existing heading.",
+      "acceptanceCriteria": [
+        "The About section heading remains “All in One Salon Booking App”.",
+        "The About section paragraph matches the provided description text verbatim (including sentence order), and is displayed in a readable multi-line paragraph on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Update the About section paragraph text to exactly: “Smart Salon is a modern and easy to use app designed for both customers and salon owners. It allows users to book appointments quickly, explore services, and manage their time efficiently. Salon owners can handle bookings, schedules, and customer details in one place, making daily operations smooth and organized. With a simple and user friendly interface, Smart Salon helps improve the overall salon experience for everyone.” Ensure it renders as a readable multi-line paragraph at common breakpoints. This page composes shadcn-ui Button/Card components already; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Update the Footer Privacy Policy link to the provided URL with safe new-tab attributes.",
+      "acceptanceCriteria": [
+        "Clicking “Privacy Policy” opens https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md in a new tab/window.",
+        "The link uses target=\"_blank\" and rel=\"noopener noreferrer\".",
+        "Other footer links (“Terms”, “Contact”) remain present and unchanged unless explicitly specified."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Set the Footer “Privacy Policy” anchor href to https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md and add target=\"_blank\" plus rel=\"noopener noreferrer\". Keep “Terms” and “Contact” as-is. This page composes shadcn-ui Button/Card components already; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Replace App Screens placeholders with responsive, consistently styled phone-like screenshot previews served as static assets.",
+      "acceptanceCriteria": [
+        "The App Screens section no longer shows “Screen 1..5” placeholder text tiles; it renders actual screenshots.",
+        "Screenshots are stored and served as static frontend assets (no backend image serving).",
+        "Each screenshot is shown inside a consistent rounded phone-like frame/container with the existing dark luxury styling (borders/shadows aligned with current design).",
+        "Layout is responsive: 1 column on small screens and expands up to 5 across on large screens without overflow or distortion (images keep aspect ratio)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/screenshots/media-01.jpg",
+          "operation": "create",
+          "description": "Add screenshot asset sourced from the user upload “Media (1).jpg” and commit it as a static frontend file."
+        },
+        {
+          "path": "frontend/public/assets/screenshots/media-02.jpg",
+          "operation": "create",
+          "description": "Add screenshot asset sourced from the user upload “Media (2).jpg” and commit it as a static frontend file."
+        },
+        {
+          "path": "frontend/public/assets/screenshots/media-03.jpg",
+          "operation": "create",
+          "description": "Add screenshot asset sourced from the user upload “Media (3).jpg” and commit it as a static frontend file."
+        },
+        {
+          "path": "frontend/public/assets/screenshots/media-04.jpg",
+          "operation": "create",
+          "description": "Add screenshot asset sourced from the user upload “Media (4).jpg” and commit it as a static frontend file."
+        },
+        {
+          "path": "frontend/public/assets/screenshots/media-05.jpg",
+          "operation": "create",
+          "description": "Add screenshot asset sourced from the user upload “Media (5).jpg” and commit it as a static frontend file."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Replace the App Screens section placeholder tile map with a curated array of static screenshot paths (from frontend/public/assets/screenshots/...). Render each image within a consistent rounded, phone-like frame using the existing dark luxury styling (border/shadow/radius aligned with current placeholders), and ensure responsive grid behavior remains: 1 column on small screens, scaling up to 5 columns on large screens, no overflow, and images keep aspect ratio (no stretching). This page composes shadcn-ui Button/Card components already; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Add the provided app icon as a hero brand mark and as the favicon/app icon using static assets.",
+      "acceptanceCriteria": [
+        "The hero section includes a small, tasteful brand mark (the provided app icon) that does not disrupt the existing centered layout.",
+        "The site includes a favicon/app icon derived from the provided icon image, and browsers show it in the tab.",
+        "All icon assets are static frontend files committed under the frontend public assets area."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png",
+          "operation": "create",
+          "description": "Create the 512x512 app icon variant from “ChatGPT Image Feb 11, 2026, 07_47_53 PM.png” (add transparent-safe padding if needed) and commit it at frontend/public/assets/generated/smart-salon-icon.dim_512x512.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png",
+          "operation": "create",
+          "description": "Create the 64x64 favicon variant from “ChatGPT Image Feb 11, 2026, 07_47_53 PM.png” and commit it at frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Add a small visible brand mark in the hero area using the provided icon asset (use frontend/public/assets/generated/smart-salon-icon.dim_512x512.png). Place it tastefully within the existing centered hero layout so it does not disrupt spacing/typography. This page composes shadcn-ui Button/Card components already; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Wire the favicon/app icon into the HTML head using the static assets frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png and frontend/public/assets/generated/smart-salon-icon.dim_512x512.png so browsers show the icon in the tab and use it as an app icon where supported."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Add basic SEO by setting a meta description derived from the provided Smart Salon description.",
+      "acceptanceCriteria": [
+        "The HTML head includes a <meta name=\"description\" ...> tag.",
+        "The meta description content is derived from the provided description (can be shortened for length, but must remain faithful and in English)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add a <meta name=\"description\"> tag in the HTML head whose content is derived from the provided Smart Salon description (may be shortened to typical meta length while remaining faithful and in English)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Add a deployment/domain guidance document for free Internet Computer hosting and later custom domain connection.",
+      "acceptanceCriteria": [
+        "A new documentation file is added in the repository (e.g., DOMAIN.md or DEPLOYMENT.md) with clear steps and options for a free URL and later custom domain connection.",
+        "The document does not claim to automatically register a custom domain for free; it explains realistic options and constraints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/DEPLOYMENT.md",
+          "operation": "create",
+          "description": "Create a deployment/domain guidance document describing: the default free canister URL option for Internet Computer deployments, other free hosting URL options available in typical ICP workflows, and how a custom domain can be connected later. Clearly state constraints (no automatic free domain registration) and keep steps practical."
+        }
+      ]
+    }
+  ]
+}

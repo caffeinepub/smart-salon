@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a modern, premium, dark-themed responsive landing page for the “Smart Salon” mobile app (salon booking & management), with specified sections, luxury styling, and layout adjustments (80% centered content, 2.5 gutters, top-aligned icons, smaller description font).",
+  "architectural_notes": [
+    "Layout: use 80% centered content width (not full-bleed) to keep content in the middle.",
+    "Grid: set column gutters to 2.5 to increase spacing between columns.",
+    "Alignment: set icon/feature card alignment to Top so icons align in one line across cards.",
+    "Typography: reduce description font size slightly to avoid text feeling “squeezed”.",
+    "Theme tokens: bg #0B0F19, accent #D4AF37, headings #FFFFFF, body text #B0B3B8; modern sans-serif; rounded cards + subtle shadows; mobile responsive.",
+    "Content: use the user-provided short app description for About copy and/or SEO meta description.",
+    "Links: Privacy Policy should point to https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Create favicon/app-icon variants with transparent-safe padding if needed (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-icon.dim_512x512.png)\n- Create a smaller favicon variant suitable for browser tabs (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-favicon.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-modern-premium-landing-page-for-the-mobile-app-named-smart-salon-with-a-dark-luxury-theme-and-a-minimal-elegant-centered-layout",
+      "title": "Create a single-page, modern, premium landing page for the mobile app named “Smart Salon” with a dark luxury theme and a minimal, elegant, centered layout.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-global-layout-rules-for-the-landing-page-set-the-main-content-container-to-80-width-not-full-bleed-and-centered-increase-inter-column-spacing-gutters-to-2-5-units-use-top-alignment-for-icon-text-blocks-so-icons-sit-on-a-consistent-horizontal-line-make-feature-description-text-slightly-smaller-so-it-does-not-feel-squeezed",
+      "title": "Implement global layout rules for the landing page: set the main content container to 80% width (not full-bleed) and centered; increase inter-column spacing (gutters) to 2.5 units; use top alignment for icon+text blocks so icons sit on a consistent horizontal line; make feature/description text slightly smaller so it does not feel squeezed.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-with-the-exact-copy-and-ctas-headline-book-your-salon-appointments-anytime-subtext-easy-booking-rewards-and-complete-salon-management-in-one-app-primary-button-get-started-secondary-button-view-features",
+      "title": "Build the Hero section with the exact copy and CTAs: Headline “Book Your Salon Appointments Anytime”, subtext “Easy booking, rewards, and complete salon management in one app”, primary button “Get Started”, secondary button “View Features”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-about-section-with-the-exact-copy-headline-all-in-one-salon-booking-app-and-the-provided-paragraph-describing-customers-and-salon-owners",
+      "title": "Build the About section with the exact copy: Headline “All in One Salon Booking App” and the provided paragraph describing customers and salon owners.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-features-section-with-headline-and-subtext-and-include-4-feature-cards-with-icons-and-the-exact-titles-descriptions-smart-booking-coins-rewards-owner-dashboard-easy-management-ensure-the-icons-and-text-are-top-aligned-and-cards-use-rounded-corners-with-subtle-shadows",
+      "title": "Build the Features section with headline and subtext, and include 4 feature cards with icons and the exact titles/descriptions: Smart Booking, Coins Rewards, Owner Dashboard, Easy Management. Ensure the icons and text are top-aligned and cards use rounded corners with subtle shadows.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-how-it-works-section-with-headline-simple-steps-and-three-steps-using-the-exact-step-titles-and-descriptions-step-1-search-salon-step-2-book-appointment-step-3-earn-rewards",
+      "title": "Build the How It Works section with headline “Simple Steps” and three steps using the exact step titles and descriptions: Step 1 Search Salon, Step 2 Book Appointment, Step 3 Earn Rewards.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-benefits-section-with-headline-built-for-customers-and-owners-and-the-provided-bullet-points",
+      "title": "Build the Benefits section with headline “Built for Customers and Owners” and the provided bullet points.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-app-screens-section-with-headline-see-how-it-works-and-subtext-a-simple-and-powerful-interface-and-include-a-responsive-layout-placeholder-area-for-3-to-5-mobile-app-screenshots-no-functional-carousel-required-unless-already-available-in-the-template",
+      "title": "Build the App Screens section with headline “See How It Works” and subtext “A simple and powerful interface”, and include a responsive layout placeholder area for 3 to 5 mobile app screenshots (no functional carousel required unless already available in the template).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-footer-with-text-all-rights-reserved-and-links-labeled-privacy-policy-terms-and-contact",
+      "title": "Build the Footer with text “All rights reserved” and links labeled “Privacy Policy”, “Terms”, and “Contact”.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-specified-design-tokens-consistently-across-the-landing-page-background-0b0f19-gold-accent-d4af37-headings-ffffff-paragraph-text-b0b3b8-use-clean-modern-ui-elements-rounded-cards-subtle-shadows-and-ensure-the-entire-page-is-mobile-responsive",
+      "title": "Apply the specified design tokens consistently across the landing page: background #0B0F19, gold accent #D4AF37, headings #FFFFFF, paragraph text #B0B3B8; use clean modern UI elements, rounded cards, subtle shadows, and ensure the entire page is mobile responsive.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-about-section-paragraph-copy-to-use-the-user-provided-short-description-exactly-as-provided-english-replacing-the-current-shorter-sentence",
+      "title": "Update the About section paragraph copy to use the user-provided short description exactly as provided (English), replacing the current shorter sentence.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-the-footer-privacy-policy-link-to-point-to-the-provided-url-and-open-in-a-new-tab-with-safe-rel-attributes",
+      "title": "Set the Footer “Privacy Policy” link to point to the provided URL and open in a new tab with safe rel attributes.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-app-screens-section-placeholder-cards-with-the-user-uploaded-app-screenshots-displayed-as-responsive-consistently-styled-phone-screen-previews-3-5-images-visible-depending-on-viewport-width",
+      "title": "Replace the App Screens section placeholder cards with the user-uploaded app screenshots, displayed as responsive, consistently-styled phone screen previews (3–5 images visible depending on viewport width).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-provided-smart-salon-app-icon-image-to-the-landing-page-branding-and-site-metadata-use-it-as-a-visible-brand-mark-in-the-hero-area-and-as-the-site-favicon-app-icon",
+      "title": "Add the provided Smart Salon app icon image to the landing page branding and site metadata: use it as a visible brand mark in the hero area and as the site favicon/app icon.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-metadata-using-the-provided-smart-salon-description-set-a-meta-description-in-the-html-head-based-on-the-user-provided-short-description",
+      "title": "Add basic SEO metadata using the provided Smart Salon description: set a meta description in the HTML head based on the user-provided short description.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-short-deployment-domain-guidance-document-explaining-free-hosting-domain-options-for-the-smart-salon-site-on-the-internet-computer-including-the-default-free-canister-url-and-how-a-custom-domain-could-be-connected-later",
+      "title": "Add a short deployment/domain guidance document explaining free hosting/domain options for the Smart Salon site on the Internet Computer (including the default free canister URL) and how a custom domain could be connected later.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a modern, premium, responsive landing page for the Smart Salon mobile app (dark luxury theme with gold accents) including hero, about, features, how-it-works, benefits, app screens placeholder, and footer.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update landing page content to use the user-provided short app description (e.g., About section and/or meta description).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Set the Privacy Policy link in the footer to the provided GitHub raw URL.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Assist with setting up/choosing a domain using the Smart Salon name (user wants a free option if possible).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Smart Salon",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
