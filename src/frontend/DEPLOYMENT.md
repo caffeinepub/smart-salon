@@ -1,10 +1,18 @@
-# Smart Salon - Deployment & Domain Guide
+# Smart Salon - Deployment Guide
 
-This guide explains how to deploy your Smart Salon landing page and connect a custom domain.
+## Internet Computer Deployment
 
-## Free Hosting Options
+Your Smart Salon application is deployed on the **Internet Computer (ICP)**, a decentralized blockchain network that hosts your frontend and backend canisters.
 
-### 1. Internet Computer (ICP) Canister URL (Default)
+### What You Get
 
-When you deploy your app to the Internet Computer, you automatically get a free canister URL:
+✅ **Free Hosting**: Your app runs on ICP canisters with no monthly hosting fees  
+✅ **Global CDN**: Fast content delivery worldwide  
+✅ **Decentralized**: No single point of failure  
+✅ **HTTPS by Default**: Secure connections out of the box
 
+### Your Live URLs
+
+After deployment, you'll receive canister URLs in this format:
+
+**Frontend Canister:**

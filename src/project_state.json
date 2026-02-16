@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Build a modern, premium, dark-themed responsive landing page for the “Smart Salon” mobile app (salon booking & management), with specified sections, luxury styling, and layout adjustments (80% centered content, 2.5 gutters, top-aligned icons, smaller description font).",
+  "projectStateVersion": 15,
+  "summary": "Improve the existing Smart Salon landing page to look modern, clean, and premium (dark theme with gold accents), focusing only on booking/scheduling/management; remove all rewards/coins/gamification references; do not reuse the previously provided paragraph and instead write new short clean website copy; ensure correct use of the provided logo in the header; refine spacing/alignment/typography; include a clean mobile app preview in the hero; update features to 3–4 cards including Service Discovery; keep mobile responsiveness and minimal layout. Additionally, update footer Contact details (email + phone) and create new Privacy Policy and Terms content/pages (Privacy Policy inspired by the shared page, Terms drafted appropriately).",
   "architectural_notes": [
     "Layout: use 80% centered content width (not full-bleed) to keep content in the middle.",
     "Grid: set column gutters to 2.5 to increase spacing between columns.",
@@ -9,11 +9,13 @@
     "Typography: reduce description font size slightly to avoid text feeling “squeezed”.",
     "Theme tokens: bg #0B0F19, accent #D4AF37, headings #FFFFFF, body text #B0B3B8; modern sans-serif; rounded cards + subtle shadows; mobile responsive.",
     "Content: use the user-provided short app description for About copy and/or SEO meta description.",
-    "Links: Privacy Policy should point to https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md"
+    "Links: Privacy Policy should point to https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md",
+    "Content: remove any coins/rewards/gamification messaging; keep scope limited to booking, scheduling, and management.",
+    "Copy: do not reuse the previously provided paragraph verbatim; write new short, clean landing-page copy.",
+    "Branding: use the provided app logo (no replacements); keep it sharp, undistorted, with proper padding/spacing in the header."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Create favicon/app-icon variants with transparent-safe padding if needed (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-icon.dim_512x512.png)\n- Create a smaller favicon variant suitable for browser tabs (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-favicon.dim_64x64.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-page-modern-premium-landing-page-for-the-mobile-app-named-smart-salon-with-a-dark-luxury-theme-and-a-minimal-elegant-centered-layout",
@@ -142,18 +144,164 @@
         "REQ-16"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-all-references-to-coins-rewards-gamification-or-any-reward-system-from-the-entire-landing-page-including-any-icons-labels-feature-cards-step-descriptions-and-marketing-copy",
+      "title": "Remove all references to coins, rewards, gamification, or any reward system from the entire landing page, including any icons, labels, feature cards, step descriptions, and marketing copy.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-about-section-paragraph-and-any-other-long-form-descriptive-copy-with-newly-written-short-clean-modern-landing-page-copy-english-that-is-suitable-for-a-premium-startup-website-and-does-not-reuse-the-previously-shared-paragraph-verbatim",
+      "title": "Replace the current About section paragraph and any other long-form descriptive copy with newly written short, clean, modern landing-page copy (English) that is suitable for a premium startup website and does not reuse the previously shared paragraph verbatim.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-section-copy-to-remove-rewards-related-wording-while-keeping-a-strong-heading-short-supporting-text-and-clear-call-to-action-buttons-ensure-the-hero-layout-looks-premium-with-improved-spacing-alignment-and-typography",
+      "title": "Update the Hero section copy to remove rewards-related wording while keeping a strong heading, short supporting text, and clear call-to-action buttons; ensure the hero layout looks premium with improved spacing, alignment, and typography.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clean-mobile-app-preview-to-the-hero-section-using-the-existing-real-app-screenshots-do-not-introduce-rewards-related-imagery-presented-as-a-premium-phone-style-preview-alongside-the-hero-text-on-desktop-and-stacked-appropriately-on-mobile",
+      "title": "Add a clean mobile app preview to the Hero section using the existing real app screenshots (do not introduce rewards-related imagery), presented as a premium phone-style preview alongside the hero text on desktop and stacked appropriately on mobile.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-clean-header-that-displays-the-provided-smart-salon-logo-prominently-and-professionally-with-correct-sizing-and-spacing-and-without-distortion-do-not-replace-the-logo-with-other-icons-and-do-not-generate-a-new-logo",
+      "title": "Create a clean header that displays the provided Smart Salon logo prominently and professionally, with correct sizing and spacing, and without distortion; do not replace the logo with other icons and do not generate a new logo.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-features-section-to-show-3-or-4-feature-cards-with-simple-relevant-icons-and-the-following-feature-set-only-smart-booking-owner-dashboard-easy-management-service-discovery-remove-replace-any-rewards-related-or-unrelated-feature-cards",
+      "title": "Revise the Features section to show 3 or 4 feature cards with simple relevant icons and the following feature set only: Smart Booking, Owner Dashboard, Easy Management, Service Discovery; remove/replace any rewards-related or unrelated feature cards.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-how-it-works-section-to-show-3-simple-steps-with-icons-ensuring-step-titles-descriptions-do-not-reference-rewards-and-align-with-booking-scheduling-and-management",
+      "title": "Revise the How It Works section to show 3 simple steps with icons, ensuring step titles/descriptions do not reference rewards and align with booking, scheduling, and management.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-app-screens-section-using-the-real-app-screenshots-and-refine-presentation-to-a-clean-premium-layout-grid-or-slider-maintaining-consistent-phone-preview-styling-and-strong-spacing-on-all-screen-sizes",
+      "title": "Keep the App Screens section using the real app screenshots, and refine presentation to a clean premium layout (grid or slider), maintaining consistent phone-preview styling and strong spacing on all screen sizes.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-page-wide-ui-polish-improve-spacing-alignment-and-typography-across-all-sections-ensure-consistent-font-sizing-and-hierarchy-use-the-specified-dark-premium-theme-colors-consistently-maintain-rounded-cards-soft-shadows-improved-button-styling-and-mobile-responsiveness",
+      "title": "Apply page-wide UI polish: improve spacing, alignment, and typography across all sections; ensure consistent font sizing and hierarchy; use the specified dark premium theme colors consistently; maintain rounded cards, soft shadows, improved button styling, and mobile responsiveness.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-seo-meta-description-in-frontend-index-html-to-a-newly-written-short-clean-description-that-matches-the-updated-no-rewards-positioning-booking-scheduling-management-and-does-not-reuse-the-previously-shared-paragraph-verbatim",
+      "title": "Update SEO meta description in frontend/index.html to a newly written short, clean description that matches the updated no-rewards positioning (booking, scheduling, management) and does not reuse the previously shared paragraph verbatim.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-so-the-contact-link-opens-an-in-app-contact-view-page-section-modal-that-displays-the-provided-contact-details-and-provides-clickable-actions",
+      "title": "Update the footer so the “Contact” link opens an in-app Contact view (page/section/modal) that displays the provided contact details and provides clickable actions.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-external-privacy-policy-footer-link-with-an-in-app-privacy-policy-view-page-section-modal-containing-newly-written-english-privacy-policy-content-inspired-by-the-user-shared-privacy-policy-page-do-not-copy-verbatim",
+      "title": "Replace the current external “Privacy Policy” footer link with an in-app Privacy Policy view (page/section/modal) containing newly written English privacy policy content inspired by the user-shared privacy policy page (do not copy verbatim).",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-in-app-terms-conditions-view-page-section-modal-with-newly-written-english-terms-content-suitable-for-smart-salon-and-wire-the-footer-terms-link-to-open-it",
+      "title": "Implement an in-app Terms & Conditions view (page/section/modal) with newly written English terms content suitable for Smart Salon, and wire the footer “Terms” link to open it.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-7-children-s-privacy-section-from-the-in-app-privacy-policy-content-so-it-no-longer-appears-anywhere-in-the-privacy-policy-modal",
+      "title": "Remove the “7. Children's Privacy” section from the in-app Privacy Policy content so it no longer appears anywhere in the Privacy Policy modal.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-smart-salon-app-interface-previews-from-the-landing-page-including-the-hero-phone-app-preview-image-and-the-entire-app-screens-section-grid-that-displays-screenshots",
+      "title": "Remove all Smart Salon app interface previews from the landing page, including the hero phone/app preview image and the entire “App Screens” section/grid that displays screenshots.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-landing-page-branding-to-use-only-the-single-user-provided-smart-salon-logo-uploaded-image-in-the-top-corner-header-and-remove-any-additional-visible-logo-images-elsewhere-on-the-page-e-g-the-footer-brand-logo-do-not-generate-a-new-logo-and-do-not-substitute-with-icons",
+      "title": "Update the landing page branding to use only the single user-provided Smart Salon logo (uploaded image) in the top corner/header, and remove any additional visible logo images elsewhere on the page (e.g., the footer brand logo). Do not generate a new logo and do not substitute with icons.",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adjust-hero-above-the-fold-typography-and-layout-so-key-lines-are-slightly-longer-avoid-overly-short-broken-lines-while-keeping-a-premium-hierarchy-and-strong-readability-across-common-breakpoints",
+      "title": "Adjust hero/above-the-fold typography and layout so key lines are slightly longer (avoid overly short, broken lines) while keeping a premium hierarchy and strong readability across common breakpoints.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refine-the-formatting-layout-of-the-lower-portion-of-the-landing-page-below-the-main-sections-cta-footer-area-to-look-more-premium-by-improving-spacing-alignment-and-structure-without-adding-new-product-features",
+      "title": "Refine the formatting/layout of the lower portion of the landing page (below the main sections—CTA + footer area) to look more premium by improving spacing, alignment, and structure without adding new product features.",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deploy-publish-the-current-smart-salon-application-to-the-internet-computer-using-the-existing-deployment-process-and-provide-the-live-canister-url-s-for-preview",
+      "title": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a modern, premium, responsive landing page for the Smart Salon mobile app (dark luxury theme with gold accents) including hero, about, features, how-it-works, benefits, app screens placeholder, and footer.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Update landing page content to use the user-provided short app description (e.g., About section and/or meta description).",
       "reqIds": [],
       "status": "pending"
     },
@@ -166,6 +314,84 @@
     {
       "id": "AR-4",
       "summary": "Assist with setting up/choosing a domain using the Smart Salon name (user wants a free option if possible).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Remove all references to coins, rewards, or gamification from the landing page design and content (no reward system).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Replace existing About/marketing copy with newly written short, clean, modern website copy (do not use the previously provided paragraph directly).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update the Hero section to include a clean mobile app preview alongside a strong headline, short text, and clear CTA.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Revise the Features section to use 3–4 cards with simple relevant icons, including Smart Booking, Owner Dashboard, Easy Management, and Service Discovery (exclude rewards-related features).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Ensure the provided Smart Salon logo is used correctly (clean and visible in header; proper spacing; no distortion; do not replace/generate a new logo).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Update the footer Contact section/details to use: smartsalon.business@gmail.com and phone number 7050807414.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Create a new Privacy Policy page/content inspired by the previously shared privacy policy page (not a direct copy), and link it from the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Create a Terms (Terms & Conditions) page/content drafted appropriately and link it from the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Remove section “7. Children’s Privacy” (children under 13) from the in-app Privacy Policy content.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Remove all Smart Salon app interface/screen UI previews from the landing page (e.g., app screenshots/phone mockups) as requested.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Use only the single user-provided Smart Salon logo in the header/top corner (no additional logos).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Adjust landing page copy/typography so key lines are slightly longer (avoid overly short lines) to enhance the premium look.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Refine/change the lower section formatting/layout (“niche ka format”) to look more premium (spacing/alignment/layout polish).",
       "reqIds": [],
       "status": "pending"
     }

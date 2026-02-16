@@ -2,99 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-about-section-paragraph-copy-to-use-the-user-provided-short-description-exactly-as-provided-english-replacing-the-current-shorter-sentence",
-      "featureTitle": "Update the About section paragraph copy to use the user-provided short description exactly as provided (English), replacing the current shorter sentence.",
-      "files": [
-        "frontend/src/pages/LandingPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-11"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-set-the-footer-privacy-policy-link-to-point-to-the-provided-url-and-open-in-a-new-tab-with-safe-rel-attributes",
-      "featureTitle": "Set the Footer “Privacy Policy” link to point to the provided URL and open in a new tab with safe rel attributes.",
-      "files": [
-        "frontend/src/pages/LandingPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-12"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-the-app-screens-section-placeholder-cards-with-the-user-uploaded-app-screenshots-displayed-as-responsive-consistently-styled-phone-screen-previews-3-5-images-visible-depending-on-viewport-width",
-      "featureTitle": "Replace the App Screens section placeholder cards with the user-uploaded app screenshots, displayed as responsive, consistently-styled phone screen previews (3–5 images visible depending on viewport width).",
-      "files": [
-        "frontend/src/pages/LandingPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-13"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-the-provided-smart-salon-app-icon-image-to-the-landing-page-branding-and-site-metadata-use-it-as-a-visible-brand-mark-in-the-hero-area-and-as-the-site-favicon-app-icon",
-      "featureTitle": "Add the provided Smart Salon app icon image to the landing page branding and site metadata: use it as a visible brand mark in the hero area and as the site favicon/app icon.",
-      "files": [
-        "frontend/index.html",
-        "frontend/src/pages/LandingPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-14"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-basic-seo-metadata-using-the-provided-smart-salon-description-set-a-meta-description-in-the-html-head-based-on-the-user-provided-short-description",
-      "featureTitle": "Add basic SEO metadata using the provided Smart Salon description: set a meta description in the HTML head based on the user-provided short description.",
-      "files": [
-        "frontend/index.html"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-15"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-short-deployment-domain-guidance-document-explaining-free-hosting-domain-options-for-the-smart-salon-site-on-the-internet-computer-including-the-default-free-canister-url-and-how-a-custom-domain-could-be-connected-later",
-      "featureTitle": "Add a short deployment/domain guidance document explaining free hosting/domain options for the Smart Salon site on the Internet Computer (including the default free canister URL) and how a custom domain could be connected later.",
+      "featureId": "feature-deploy-publish-the-current-smart-salon-application-to-the-internet-computer-using-the-existing-deployment-process-and-provide-the-live-canister-url-s-for-preview",
+      "featureTitle": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
       "files": [
         "frontend/DEPLOYMENT.md"
       ],
@@ -106,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-16"
+        "REQ-35"
       ],
       "confidence": "high"
     }

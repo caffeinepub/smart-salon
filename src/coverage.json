@@ -1,87 +1,24 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T16:03:22.693Z",
+  "generatedAt": "2026-02-16T16:54:13.595Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 6,
-    "implemented": 6,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Update the About section paragraph copy to use the user-provided short description exactly as provided (English), replacing the current shorter sentence.",
+        "id": "REQ-35",
+        "summary": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/LandingPage.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/LandingPage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Set the Footer “Privacy Policy” link to point to the provided URL and open in a new tab with safe rel attributes.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/LandingPage.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/LandingPage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Replace the App Screens section placeholder cards with the user-uploaded app screenshots, displayed as responsive, consistently-styled phone screen previews (3–5 images visible depending on viewport width).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/public/assets/screenshots/media-01.jpg",
-          "frontend/public/assets/screenshots/media-02.jpg",
-          "frontend/public/assets/screenshots/media-03.jpg",
-          "frontend/public/assets/screenshots/media-04.jpg",
-          "frontend/public/assets/screenshots/media-05.jpg",
-          "frontend/src/pages/LandingPage.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/LandingPage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-14",
-        "summary": "Add the provided Smart Salon app icon image to the landing page branding and site metadata: use it as a visible brand mark in the hero area and as the site favicon/app icon.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png",
+          "frontend/DEPLOYMENT.md",
+          "frontend/public/assets/ChatGPT Image Feb 11, 2026, 07_47_53 PM-2.png",
           "frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png",
-          "frontend/src/pages/LandingPage.tsx",
-          "frontend/index.html"
-        ],
-        "matchedFiles": [
-          "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png",
-          "frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png",
-          "frontend/src/pages/LandingPage.tsx",
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-15",
-        "summary": "Add basic SEO metadata using the provided Smart Salon description: set a meta description in the HTML head based on the user-provided short description.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/index.html"
-        ],
-        "matchedFiles": [
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-16",
-        "summary": "Add a short deployment/domain guidance document explaining free hosting/domain options for the Smart Salon site on the Internet Computer (including the default free canister URL) and how a custom domain could be connected later.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/DEPLOYMENT.md"
+          "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png"
         ],
         "matchedFiles": [
           "frontend/DEPLOYMENT.md"
@@ -91,17 +28,10 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/DEPLOYMENT.md",
-    "frontend/index.html",
-    "frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png",
-    "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png",
-    "frontend/src/config.ts",
-    "frontend/src/pages/LandingPage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

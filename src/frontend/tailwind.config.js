@@ -77,12 +77,17 @@ export default {
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)',
                 xl: '1rem',
-                '2xl': '1.5rem'
+                '2xl': '1.5rem',
+                '3xl': '2rem'
             },
             boxShadow: {
                 xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
                 luxury: '0 10px 40px rgba(212, 175, 55, 0.1)',
                 'luxury-lg': '0 20px 60px rgba(212, 175, 55, 0.15)'
+            },
+            spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem'
             },
             keyframes: {
                 'accordion-down': {

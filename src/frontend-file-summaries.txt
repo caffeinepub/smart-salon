@@ -1,8 +1,13 @@
 {
-  "frontend/src/index.css": "Global styles implementing the dark luxury theme with OKLCH color tokens for Smart Salon (dark background #0B0F19, gold accent #D4AF37, white headings, light grey text) and modern typography.",
-  "frontend/tailwind.config.js": "Tailwind configuration extended with Smart Salon's luxury design tokens including gold color, Inter font family, custom border radii, and luxury shadow utilities.",
+  "frontend/src/index.css": "Global styles with dark luxury OKLCH theme tokens, improved typography hierarchy with letter-spacing for headings and paragraphs, and text-balance utility for premium readability.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with additional border radius (3xl) and spacing utilities to support premium design system.",
   "frontend/src/App.tsx": "Root application component that renders the LandingPage with dark mode enabled.",
-  "frontend/src/pages/LandingPage.tsx": "Complete single-page landing page for Smart Salon featuring hero with brand icon, updated about section with provided description, features, how-it-works, benefits, real app screenshots in phone frames, and footer with privacy policy link to GitHub.",
-  "frontend/index.html": "HTML entry point with SEO meta description, favicon, and app icon links for Smart Salon landing page.",
-  "frontend/DEPLOYMENT.md": "Deployment and domain guidance document explaining free Internet Computer canister URL hosting, custom domain connection options, costs, and realistic constraints for Smart Salon app."
+  "frontend/src/pages/LandingPage.tsx": "Premium landing page with single user-uploaded logo in header (no footer logo), longer hero text lines using text-balance utility, improved vertical spacing throughout CTA and footer sections with cleaner grid layout and enhanced bottom bar separation.",
+  "frontend/index.html": "HTML entry point with updated SEO meta description focused on booking, scheduling, and management without rewards/gamification references.",
+  "frontend/DEPLOYMENT.md": "Comprehensive deployment guide explaining ICP canister hosting, live URLs, custom domain setup, update process, and technical stack details for Smart Salon.",
+  "frontend/src/content/legal.ts": "Shared constants for contact information (email, phone) and company details used across all legal/contact views.",
+  "frontend/src/components/legal/LegalModal.tsx": "Reusable modal component with scrollable content area for displaying legal documents and contact information in the existing dark premium styling.",
+  "frontend/src/components/legal/ContactView.tsx": "Contact view component displaying clickable email (mailto:) and phone (tel:) links with icons and descriptions in premium card layout.",
+  "frontend/src/components/legal/PrivacyPolicyView.tsx": "Privacy Policy view component with comprehensive English content covering information collection, usage, sharing, retention, security, user rights, policy changes, and contact details (Children's Privacy section removed and subsequent sections renumbered).",
+  "frontend/src/components/legal/TermsView.tsx": "Complete Terms & Conditions view with newly written English content including acceptance, use of service, bookings/cancellations, payments, salon owner responsibilities, disclaimers, liability, indemnification, termination, governing law, and contact information."
 }

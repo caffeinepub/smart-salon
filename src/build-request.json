@@ -1,133 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Integrate provided description, policy link, screenshots, and app icon into Smart Salon landing page",
+  "title": "Publish the current Smart Salon site",
   "projectName": "Smart Salon",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Update the About section paragraph copy to use the user-provided short description exactly as provided (English), replacing the current shorter sentence.",
-      "target": "frontend",
+      "id": "REQ-35",
+      "text": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-1"
         ],
         "quotes": [
-          "I am giving short description for my app\nSmart Salon is a modern and easy to use app designed for both customers and salon owners. It allows users to book appointments quickly, explore services, and manage their time efficiently. Salon owners can handle bookings, schedules, and customer details in one place, making daily operations smooth and organized. With a simple and user friendly interface, Smart Salon helps improve the overall salon experience for everyone."
+          "ab publish krdo"
         ]
       },
       "acceptanceCriteria": [
-        "The About section heading remains “All in One Salon Booking App”.",
-        "The About section paragraph matches the provided description text verbatim (including sentence order), and is displayed in a readable multi-line paragraph on mobile and desktop."
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Set the Footer “Privacy Policy” link to point to the provided URL and open in a new tab with safe rel attributes.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Clicking “Privacy Policy” opens https://raw.githubusercontent.com/Qudsiya-khan-dot/smart-salon-privacy-policy/refs/heads/main/README.md in a new tab/window.",
-        "The link uses target=\"_blank\" and rel=\"noopener noreferrer\".",
-        "Other footer links (“Terms”, “Contact”) remain present and unchanged unless explicitly specified."
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "text": "Replace the App Screens section placeholder cards with the user-uploaded app screenshots, displayed as responsive, consistently-styled phone screen previews (3–5 images visible depending on viewport width).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "The user has uploaded 9 image(s): Media (7).jpg, Media (1).jpg, Media.jpg, Media (2).jpg, Media (5).jpg, Media (3).jpg, Media (4).jpg, Media (6).jpg, ChatGPT Image Feb 11, 2026, 07_47_53 PM.png."
-        ]
-      },
-      "acceptanceCriteria": [
-        "The App Screens section no longer shows “Screen 1..5” placeholder text tiles; it renders actual screenshots.",
-        "Screenshots are stored and served as static frontend assets (no backend image serving).",
-        "Each screenshot is shown inside a consistent rounded phone-like frame/container with the existing dark luxury styling (borders/shadows aligned with current design).",
-        "Layout is responsive: 1 column on small screens and expands up to 5 across on large screens without overflow or distortion (images keep aspect ratio)."
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Add the provided Smart Salon app icon image to the landing page branding and site metadata: use it as a visible brand mark in the hero area and as the site favicon/app icon.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "ChatGPT Image Feb 11, 2026, 07_47_53 PM.png"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The hero section includes a small, tasteful brand mark (the provided app icon) that does not disrupt the existing centered layout.",
-        "The site includes a favicon/app icon derived from the provided icon image, and browsers show it in the tab.",
-        "All icon assets are static frontend files committed under the frontend public assets area."
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "text": "Add basic SEO metadata using the provided Smart Salon description: set a meta description in the HTML head based on the user-provided short description.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "Smart Salon is a modern and easy to use app designed for both customers and salon owners. It allows users to book appointments quickly, explore services, and manage their time efficiently. Salon owners can handle bookings, schedules, and customer details in one place, making daily operations smooth and organized. With a simple and user friendly interface, Smart Salon helps improve the overall salon experience for everyone."
-        ]
-      },
-      "acceptanceCriteria": [
-        "The HTML head includes a <meta name=\"description\" ...> tag.",
-        "The meta description content is derived from the provided description (can be shortened for length, but must remain faithful and in English)."
-      ]
-    },
-    {
-      "id": "REQ-16",
-      "text": "Add a short deployment/domain guidance document explaining free hosting/domain options for the Smart Salon site on the Internet Computer (including the default free canister URL) and how a custom domain could be connected later.",
-      "target": "unknown",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "mai ye free mai app bnabna chahti hu tom smart salon name se hi domain bna skt eho"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A new documentation file is added in the repository (e.g., DOMAIN.md or DEPLOYMENT.md) with clear steps and options for a free URL and later custom domain connection.",
-        "The document does not claim to automatically register a custom domain for free; it explains realistic options and constraints."
+        "A successful deploy is performed for the current codebase (frontend and backend canisters as applicable).",
+        "The resulting live canister URL(s) are provided (at minimum, the frontend canister URL suitable for sharing and previewing in a browser).",
+        "The deployed site loads successfully at the provided URL and renders the Smart Salon landing page without runtime errors."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under frontend/src/components/ui (compose existing UI components instead).",
-    "Do not edit immutable hook/entry paths listed in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx, frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts).",
-    "Keep the backend as a single Motoko actor; do not introduce additional backend services or external databases.",
-    "Serve all screenshots and icons as static frontend assets; do not route images through the backend."
+    "Backend must remain a single Motoko actor in backend/main.mo; add migration.mo only if state upgrades are required.",
+    "Do not edit files under frontend/src/components/ui or other immutablePaths listed in SYSTEM_CONTEXT; compose them instead."
   ],
   "nonGoals": [
-    "Implementing full app functionality (booking flows, salon registration, owner dashboard data, payments, push notifications).",
-    "Integrating third-party authentication providers (only Internet Identity is supported).",
-    "Actually purchasing/registering a custom domain on the user’s behalf or guaranteeing a free custom domain registration."
+    "Do not add new landing-page sections or new product features as part of publishing.",
+    "Do not introduce third-party hosting or external database/services for deployment."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Create favicon/app-icon variants with transparent-safe padding if needed (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-icon.dim_512x512.png)",
-      "Create a smaller favicon variant suitable for browser tabs (ChatGPT Image Feb 11, 2026, 07_47_53 PM.png > smart-salon-favicon.dim_64x64.png)"
-    ]
+    "edits": []
   },
   "userProfileUpdate": {
     "goalsToAdd": [],
