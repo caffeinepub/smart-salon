@@ -1,36 +1,42 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Smart Salon — Publish current site on Internet Computer",
+  "title": "Smart Salon - Capture final public landing page URL(s) and complete deployment documentation",
   "requirements": [
     {
-      "id": "REQ-35",
-      "summary": "Prepare the current frontend for a successful ICP publish using the existing deployment process and ensure the live canister URL(s) can be obtained and shared for preview.",
+      "id": "REQ-44",
+      "summary": "Capture and hand off the freshly deployed landing page public URL(s) for preview (custom domain + any technical canister URL).",
       "acceptanceCriteria": [
-        "A successful deploy is performed for the current codebase (frontend and backend canisters as applicable).",
-        "The resulting live canister URL(s) are provided (at minimum, the frontend canister URL suitable for sharing and previewing in a browser).",
-        "The deployed site loads successfully at the provided URL and renders the Smart Salon landing page without runtime errors."
+        "A fresh deployment of the current frontend is published and reachable over HTTPS.",
+        "The final public landing page URL(s) are captured as output/artifacts for handoff (at minimum the custom domain URL https://smartsalonapp.com, plus any canister gateway URL if available).",
+        "The provided URL(s) open successfully in Chrome without “Error 400 — Canister ID Not Resolved”."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/deployment/latest-public-urls.md",
+          "operation": "create",
+          "description": "Create a copy-pasteable handoff artifact that lists the final Primary URL (https://smartsalonapp.com) plus an explicit slot to record any technical canister-based access URL discovered during deployment/verification."
+        },
+        {
+          "path": "frontend/public/.well-known/ic-domains",
+          "operation": "modify",
+          "description": "Verify the custom domain allowlist includes smartsalonapp.com (and www.smartsalonapp.com if used) so the deployed site resolves correctly via the domain without canister resolution errors; update the list only if needed."
+        }
+      ]
+    },
+    {
+      "id": "REQ-45",
+      "summary": "Complete the “Public URLs for Mobile App” section in frontend/DEPLOYMENT.md with Primary URL set to https://smartsalonapp.com and any additional technical access URL(s) if available.",
+      "acceptanceCriteria": [
+        "frontend/DEPLOYMENT.md includes a filled-in Primary URL set to https://smartsalonapp.com.",
+        "frontend/DEPLOYMENT.md includes any additional relevant URL(s) (e.g., a canister-based URL) if available, clearly labeled and copy-pasteable.",
+        "Documentation does not hardcode a canister URL into any user-facing branding/marketing copy; it is only listed as a technical access URL."
       ],
       "file_operations": [
         {
           "path": "frontend/DEPLOYMENT.md",
           "operation": "modify",
-          "description": "Expand and finalize the deployment guide so it clearly documents the existing ICP deployment process and where to retrieve the resulting live canister URL(s) for sharing/preview. Reference the existing deployment scripts/templates provided by the selected github-export-icp-cli component and verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/public/assets/ChatGPT Image Feb 11, 2026, 07_47_53 PM-2.png",
-          "operation": "create",
-          "description": "Add the Smart Salon logo asset to the frontend public assets directory so the landing page header image referenced in frontend/src/pages/LandingPage.tsx resolves correctly after deployment (ICP asset serving)."
-        },
-        {
-          "path": "frontend/public/assets/generated/smart-salon-favicon.dim_64x64.png",
-          "operation": "create",
-          "description": "Ensure the generated favicon file exists at this exact path so the link tag in frontend/index.html loads correctly after deployment."
-        },
-        {
-          "path": "frontend/public/assets/generated/smart-salon-icon.dim_512x512.png",
-          "operation": "create",
-          "description": "Ensure the generated apple-touch-icon file exists at this exact path so the link tag in frontend/index.html loads correctly after deployment."
+          "description": "Finish the currently incomplete “🌐 Public URLs for Mobile App” section by explicitly listing: (1) Primary URL = https://smartsalonapp.com, and (2) an optional, clearly labeled technical canister-based access URL field to be filled in when available (kept strictly in the deployment docs section, not marketing copy)."
         }
       ]
     }

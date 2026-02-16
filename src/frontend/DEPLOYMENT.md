@@ -11,8 +11,10 @@ Your Smart Salon application is deployed on the **Internet Computer (ICP)**, a d
 ✅ **Decentralized**: No single point of failure  
 ✅ **HTTPS by Default**: Secure connections out of the box
 
-### Your Live URLs
+---
 
-After deployment, you'll receive canister URLs in this format:
+## 🌐 Public URLs for Mobile App
 
-**Frontend Canister:**
+Use these URLs in your Smart Salon mobile application:
+
+**Primary URL:**

@@ -1,48 +1,55 @@
 {
   "kind": "build_request",
-  "title": "Publish the current Smart Salon site",
+  "title": "Provide new deployed landing page URL and finalize domain-linked public URL",
   "projectName": "Smart Salon",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-35",
-      "text": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
-      "target": "both",
+      "id": "REQ-44",
+      "text": "Deploy the latest Smart Salon landing page build (the user-referenced “new version”) to the Internet Computer and provide the new public landing page URL(s) for preview.",
+      "target": "unknown",
       "source": {
         "messageIds": [
-          "msg-1"
+          "recent-messages-3"
         ],
         "quotes": [
-          "ab publish krdo"
+          "yes & give me my new landing page url as well"
         ]
       },
       "acceptanceCriteria": [
-        "A successful deploy is performed for the current codebase (frontend and backend canisters as applicable).",
-        "The resulting live canister URL(s) are provided (at minimum, the frontend canister URL suitable for sharing and previewing in a browser).",
-        "The deployed site loads successfully at the provided URL and renders the Smart Salon landing page without runtime errors."
+        "A fresh deployment of the current frontend is published and reachable over HTTPS.",
+        "The final public landing page URL(s) are captured as output/artifacts for handoff (at minimum the custom domain URL https://smartsalonapp.com, plus any canister gateway URL if available).",
+        "The provided URL(s) open successfully in Chrome without “Error 400 — Canister ID Not Resolved”."
+      ]
+    },
+    {
+      "id": "REQ-45",
+      "text": "Update frontend/DEPLOYMENT.md so the “Public URLs for Mobile App” section is complete and explicitly lists the final public landing page URL(s), with https://smartsalonapp.com as the Primary URL.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-3"
+        ],
+        "quotes": [
+          "yes & give me my new landing page url as well"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/DEPLOYMENT.md includes a filled-in Primary URL set to https://smartsalonapp.com.",
+        "frontend/DEPLOYMENT.md includes any additional relevant URL(s) (e.g., a canister-based URL) if available, clearly labeled and copy-pasteable.",
+        "Documentation does not hardcode a canister URL into any user-facing branding/marketing copy; it is only listed as a technical access URL."
       ]
     }
   ],
   "constraints": [
-    "Backend must remain a single Motoko actor in backend/main.mo; add migration.mo only if state upgrades are required.",
-    "Do not edit files under frontend/src/components/ui or other immutablePaths listed in SYSTEM_CONTEXT; compose them instead."
+    "Do not edit files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Do not add new landing-page sections or new product features as part of publishing.",
-    "Do not introduce third-party hosting or external database/services for deployment."
+    "Do not change landing page design, copy, or section structure beyond what is required to deploy and to document/provide the new URL(s).",
+    "Do not introduce new backend features or data models."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

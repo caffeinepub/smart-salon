@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-deploy-publish-the-current-smart-salon-application-to-the-internet-computer-using-the-existing-deployment-process-and-provide-the-live-canister-url-s-for-preview",
-      "featureTitle": "Deploy (publish) the current Smart Salon application to the Internet Computer using the existing deployment process, and provide the live canister URL(s) for preview.",
+      "featureId": "feature-deploy-the-latest-smart-salon-landing-page-build-the-user-referenced-new-version-to-the-internet-computer-and-provide-the-new-public-landing-page-url-s-for-preview",
+      "featureTitle": "Deploy the latest Smart Salon landing page build (the user-referenced “new version”) to the Internet Computer and provide the new public landing page URL(s) for preview.",
       "files": [
-        "frontend/DEPLOYMENT.md"
+        "frontend/deployment/latest-public-urls.md"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-35"
+        "REQ-44"
       ],
       "confidence": "high"
     }

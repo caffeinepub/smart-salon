@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
-  "summary": "Improve the existing Smart Salon landing page to look modern, clean, and premium (dark theme with gold accents), focusing only on booking/scheduling/management; remove all rewards/coins/gamification references; do not reuse the previously provided paragraph and instead write new short clean website copy; ensure correct use of the provided logo in the header; refine spacing/alignment/typography; include a clean mobile app preview in the hero; update features to 3–4 cards including Service Discovery; keep mobile responsiveness and minimal layout. Additionally, update footer Contact details (email + phone) and create new Privacy Policy and Terms content/pages (Privacy Policy inspired by the shared page, Terms drafted appropriately).",
+  "projectStateVersion": 31,
+  "summary": "Improve the existing Smart Salon landing page to look modern, clean, and premium (dark theme with gold accents), focusing only on booking/scheduling/management; remove all rewards/coins/gamification references; do not reuse the previously provided paragraph and instead write new short clean website copy; ensure correct use of the provided logo in the header; refine spacing/alignment/typography; include a clean mobile app preview in the hero; update features to 3–4 cards including Service Discovery; keep mobile responsiveness and minimal layout. Additionally, update footer Contact details (email + phone) and create new Privacy Policy and Terms content/pages (Privacy Policy inspired by the shared page, Terms drafted appropriately). Domain direction updated: user selected custom domain \"smartsalonapp.com\" (instead of smartsalon.com) for a public, app-friendly URL.",
   "architectural_notes": [
     "Layout: use 80% centered content width (not full-bleed) to keep content in the middle.",
     "Grid: set column gutters to 2.5 to increase spacing between columns.",
@@ -14,8 +14,10 @@
     "Copy: do not reuse the previously provided paragraph verbatim; write new short, clean landing-page copy.",
     "Branding: use the provided app logo (no replacements); keep it sharp, undistorted, with proper padding/spacing in the header."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
+  "known_issues": [
+    "User reports the current icp0.io public URL is not opening in Chrome (\"Canister ID Not Resolved\" / potential icp0 vs icpO confusion). Needs resolution or alternative public URL via custom domain."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-single-page-modern-premium-landing-page-for-the-mobile-app-named-smart-salon-with-a-dark-luxury-theme-and-a-minimal-elegant-centered-layout",
@@ -296,6 +298,54 @@
         "REQ-35"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-ensure-user-facing-site-metadata-remains-brand-focused-for-smart-salon-and-does-not-hardcode-any-canister-url-into-titles-descriptions-intended-for-end-users-so-the-site-remains-consistent-when-accessed-via-a-custom-domain-like-smartsalon-com",
+      "title": "Ensure user-facing site metadata remains brand-focused for Smart Salon and does not hardcode any canister URL into titles/descriptions intended for end users, so the site remains consistent when accessed via a custom domain like \"smartsalon.com\".",
+      "reqIds": [
+        "REQ-39"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-diagnose-and-fix-the-current-public-landing-page-url-returning-error-400-canister-id-not-resolved-in-chrome-by-verifying-the-deployed-frontend-canister-id-confirming-the-correct-gateway-hostname-format-and-re-deploying-the-frontend-if-necessary-so-the-site-opens-successfully-via-a-stable-public-url",
+      "title": "Diagnose and fix the current public landing-page URL returning “Error 400 — Canister ID Not Resolved” in Chrome by verifying the deployed frontend canister ID, confirming the correct gateway hostname format, and re-deploying the frontend if necessary so the site opens successfully via a stable public URL.",
+      "reqIds": [
+        "REQ-40"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-deployment-md-to-include-step-by-step-registrar-agnostic-instructions-to-connect-the-custom-domain-smartsalonapp-com-to-the-deployed-icp-frontend-canister-including-required-dns-records-https-considerations-and-typical-propagation-timelines-and-clearly-state-the-final-intended-public-url-as-https-smartsalonapp-com",
+      "title": "Update frontend/DEPLOYMENT.md to include step-by-step, registrar-agnostic instructions to connect the custom domain \"smartsalonapp.com\" to the deployed ICP frontend canister, including required DNS records, HTTPS considerations, and typical propagation timelines, and clearly state the final intended public URL as https://smartsalonapp.com.",
+      "reqIds": [
+        "REQ-41"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-brand-safe-url-metadata-for-the-custom-domain-by-updating-frontend-index-html-to-include-a-canonical-url-and-open-graph-url-that-point-to-https-smartsalonapp-com-without-hardcoding-any-canister-url-into-user-facing-titles-descriptions",
+      "title": "Add brand-safe URL metadata for the custom domain by updating frontend/index.html to include a canonical URL and Open Graph URL that point to https://smartsalonapp.com, without hardcoding any canister URL into user-facing titles/descriptions.",
+      "reqIds": [
+        "REQ-42"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-the-custom-domain-smartsalonapp-com-and-www-smartsalonapp-com-to-the-already-deployed-internet-computer-frontend-canister-and-provide-the-final-public-url-s-that-should-be-used-inside-the-smart-salon-mobile-app",
+      "title": "Connect the custom domain \"smartsalonapp.com\" (and \"www.smartsalonapp.com\") to the already-deployed Internet Computer frontend canister and provide the final public URL(s) that should be used inside the Smart Salon mobile app.",
+      "reqIds": [
+        "REQ-43"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-deploy-the-latest-smart-salon-landing-page-build-the-user-referenced-new-version-to-the-internet-computer-and-provide-the-new-public-landing-page-url-s-for-preview",
+      "title": "Deploy the latest Smart Salon landing page build (the user-referenced “new version”) to the Internet Computer and provide the new public landing page URL(s) for preview.",
+      "reqIds": [
+        "REQ-44"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -393,6 +443,34 @@
       "id": "AR-17",
       "summary": "Refine/change the lower section formatting/layout (“niche ka format”) to look more premium (spacing/alignment/layout polish).",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Ensure the site metadata remains consistent with using a custom domain by keeping the page title/description brand-focused (Smart Salon) and not hardcoding any canister URL into user-facing text.",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Help secure and configure the desired custom domain \"smartsalonapp.com\" and connect it to the deployed Internet Computer frontend canister; provide the final public URL to use inside the mobile app.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Update the deployment/domain documentation to reflect the selected custom domain \"smartsalonapp.com\" and include step-by-step connection guidance for the Internet Computer frontend canister (including what must be done via the domain registrar).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Update frontend/DEPLOYMENT.md so the “Public URLs for Mobile App” section is complete and explicitly lists the final public landing page URL(s), with https://smartsalonapp.com as the Primary URL.",
+      "reqIds": [
+        "REQ-45"
+      ],
       "status": "pending"
     }
   ],

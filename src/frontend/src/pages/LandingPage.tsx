@@ -12,7 +12,7 @@ type LegalModalType = 'contact' | 'privacy' | 'terms' | null;
 
 export default function LandingPage() {
     const currentYear = new Date().getFullYear();
-    const appIdentifier = typeof window !== 'undefined' ? window.location.hostname : 'smart-salon';
+    const appIdentifier = encodeURIComponent(typeof window !== 'undefined' ? window.location.hostname : 'smart-salon');
     const [openModal, setOpenModal] = useState<LegalModalType>(null);
 
     const handleOpenModal = (type: LegalModalType) => {
@@ -284,30 +284,30 @@ export default function LandingPage() {
                             </ul>
                         </div>
 
-                        {/* Social */}
+                        {/* Connect */}
                         <div className="space-y-5">
-                            <h3 className="text-base font-semibold text-foreground">Follow Us</h3>
+                            <h3 className="text-base font-semibold text-foreground">Connect</h3>
                             <div className="flex gap-4">
                                 <a 
                                     href="#" 
-                                    className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
-                                    aria-label="Facebook"
-                                >
-                                    <SiFacebook className="w-5 h-5" />
-                                </a>
-                                <a 
-                                    href="#" 
-                                    className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+                                    className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
                                     aria-label="X (Twitter)"
                                 >
-                                    <SiX className="w-5 h-5" />
+                                    <SiX className="w-4 h-4 text-primary" />
                                 </a>
                                 <a 
                                     href="#" 
-                                    className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors"
+                                    className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
+                                    aria-label="Facebook"
+                                >
+                                    <SiFacebook className="w-4 h-4 text-primary" />
+                                </a>
+                                <a 
+                                    href="#" 
+                                    className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
                                     aria-label="Instagram"
                                 >
-                                    <SiInstagram className="w-5 h-5" />
+                                    <SiInstagram className="w-4 h-4 text-primary" />
                                 </a>
                             </div>
                         </div>
@@ -315,17 +315,15 @@ export default function LandingPage() {
 
                     {/* Bottom Bar */}
                     <div className="pt-8 border-t border-border/40">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                            <p className="text-sm text-muted-foreground">
-                                © {currentYear} Smart Salon. All rights reserved.
-                            </p>
-                            <p className="text-sm text-muted-foreground">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+                            <p>© {currentYear} Smart Salon. All rights reserved.</p>
+                            <p>
                                 Built with love using{' '}
                                 <a 
-                                    href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(appIdentifier)}`}
+                                    href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-primary hover:text-primary/80 transition-colors font-medium"
+                                    className="text-primary hover:underline"
                                 >
                                     caffeine.ai
                                 </a>

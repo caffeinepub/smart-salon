@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Publish (deploy) the current Smart Salon application to the Internet Computer and share the live canister URL(s) for preview.
+**Goal:** Deploy the latest Smart Salon landing page build to the Internet Computer and provide the final public landing page URL(s), including the custom domain.
 
 **Planned changes:**
-- Deploy the existing Smart Salon codebase using the current Internet Computer deployment process.
-- Collect and provide the resulting live canister URL(s) (at minimum, the frontend canister URL).
-- Verify the deployed site loads successfully and renders the Smart Salon landing page without runtime errors.
+- Deploy the current Smart Salon landing page frontend build and confirm it is reachable over HTTPS.
+- Capture and provide the final public landing page URL(s), including https://smartsalonapp.com as the primary URL (and a canister/gateway URL if available).
+- Update frontend/DEPLOYMENT.md to complete the “Public URLs for Mobile App” section with the final URL(s), clearly labeled and copy-pasteable.
 
-**User-visible outcome:** A publicly accessible Smart Salon site is available via the provided live canister URL(s) and can be opened in a browser for preview.
+**User-visible outcome:** The Smart Salon landing page is accessible via the finalized public URL(s) (primary: https://smartsalonapp.com) and the deployment documentation lists the correct URLs for handoff.
