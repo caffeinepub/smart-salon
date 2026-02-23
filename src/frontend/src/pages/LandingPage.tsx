@@ -7,6 +7,7 @@ import { LegalModal } from '@/components/legal/LegalModal';
 import { ContactView } from '@/components/legal/ContactView';
 import { PrivacyPolicyView } from '@/components/legal/PrivacyPolicyView';
 import { TermsView } from '@/components/legal/TermsView';
+import { toast } from 'sonner';
 
 type LegalModalType = 'contact' | 'privacy' | 'terms' | null;
 
@@ -25,6 +26,13 @@ export default function LandingPage() {
         }
     };
 
+    const handleGetStarted = () => {
+        toast.success('App Coming Soon', {
+            description: 'We\'re working hard to bring you the best salon experience!',
+            duration: 4000,
+        });
+    };
+
     return (
         <div className="min-h-screen bg-background">
             {/* Header */}
@@ -39,7 +47,11 @@ export default function LandingPage() {
                             />
                             <span className="text-xl font-bold text-foreground">Smart Salon</span>
                         </div>
-                        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-xl">
+                        <Button 
+                            size="lg" 
+                            onClick={handleGetStarted}
+                            className="relative z-10 pointer-events-auto bg-[#D4AF37] hover:bg-[#C49F2F] text-white font-semibold px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
+                        >
                             Get Started
                         </Button>
                     </div>
@@ -64,7 +76,11 @@ export default function LandingPage() {
                                 Seamless booking and powerful management tools for customers and salon owners
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-xl shadow-luxury">
+                                <Button 
+                                    size="lg" 
+                                    onClick={handleGetStarted}
+                                    className="relative z-10 pointer-events-auto bg-[#D4AF37] hover:bg-[#C49F2F] text-white font-semibold px-8 py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
+                                >
                                     Get Started
                                 </Button>
                                 <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10 px-8 py-6 text-lg rounded-xl">
@@ -72,6 +88,20 @@ export default function LandingPage() {
                                 </Button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* About App Section */}
+            <section className="py-16 md:py-24">
+                <div className="container mx-auto px-6 max-w-7xl">
+                    <div className="text-center max-w-4xl mx-auto space-y-6">
+                        <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                            About App
+                        </h2>
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            Smart Salon is a modern salon booking and management app designed for customers and salon owners. It allows users to book appointments, manage services, and streamline salon operations efficiently.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -223,7 +253,11 @@ export default function LandingPage() {
                             Join thousands of satisfied customers and salon owners using Smart Salon
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-xl shadow-luxury">
+                            <Button 
+                                size="lg" 
+                                onClick={handleGetStarted}
+                                className="relative z-10 pointer-events-auto bg-[#D4AF37] hover:bg-[#C49F2F] text-white font-semibold px-8 py-6 text-lg rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
+                            >
                                 Get Started Now
                             </Button>
                             <Button 
@@ -293,21 +327,21 @@ export default function LandingPage() {
                                     className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
                                     aria-label="X (Twitter)"
                                 >
-                                    <SiX className="w-4 h-4 text-primary" />
+                                    <SiX className="w-5 h-5 text-primary" />
                                 </a>
                                 <a 
                                     href="#" 
                                     className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
                                     aria-label="Facebook"
                                 >
-                                    <SiFacebook className="w-4 h-4 text-primary" />
+                                    <SiFacebook className="w-5 h-5 text-primary" />
                                 </a>
                                 <a 
                                     href="#" 
                                     className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
                                     aria-label="Instagram"
                                 >
-                                    <SiInstagram className="w-4 h-4 text-primary" />
+                                    <SiInstagram className="w-5 h-5 text-primary" />
                                 </a>
                             </div>
                         </div>

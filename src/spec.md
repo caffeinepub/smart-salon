@@ -1,11 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Deploy the latest Smart Salon landing page build to the Internet Computer and provide the final public landing page URL(s), including the custom domain.
+**Goal:** Make the "Get Started" button in the hero section fully functional with an "App Coming Soon" interaction and enhance it with premium styling and smooth animations.
 
 **Planned changes:**
-- Deploy the current Smart Salon landing page frontend build and confirm it is reachable over HTTPS.
-- Capture and provide the final public landing page URL(s), including https://smartsalonapp.com as the primary URL (and a canister/gateway URL if available).
-- Update frontend/DEPLOYMENT.md to complete the “Public URLs for Mobile App” section with the final URL(s), clearly labeled and copy-pasteable.
+- Make the "Get Started" button clickable and display an "App Coming Soon" message (modal, toast, or alert) on click
+- Fix any z-index or pointer-events issues preventing button clicks
+- Apply gold (#D4AF37) background color, white text, medium border radius, and soft shadow to the button
+- Add smooth hover animation (slight scale up to ~1.05)
+- Add subtle click animation (brief press-down effect)
+- Ensure all interactions work on both desktop and mobile devices
 
-**User-visible outcome:** The Smart Salon landing page is accessible via the finalized public URL(s) (primary: https://smartsalonapp.com) and the deployment documentation lists the correct URLs for handoff.
+**User-visible outcome:** Users can click the "Get Started" button to see an "App Coming Soon" message, with the button featuring premium gold styling and smooth hover/click animations.

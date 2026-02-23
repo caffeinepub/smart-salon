@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 31,
-  "summary": "Improve the existing Smart Salon landing page to look modern, clean, and premium (dark theme with gold accents), focusing only on booking/scheduling/management; remove all rewards/coins/gamification references; do not reuse the previously provided paragraph and instead write new short clean website copy; ensure correct use of the provided logo in the header; refine spacing/alignment/typography; include a clean mobile app preview in the hero; update features to 3–4 cards including Service Discovery; keep mobile responsiveness and minimal layout. Additionally, update footer Contact details (email + phone) and create new Privacy Policy and Terms content/pages (Privacy Policy inspired by the shared page, Terms drafted appropriately). Domain direction updated: user selected custom domain \"smartsalonapp.com\" (instead of smartsalon.com) for a public, app-friendly URL.",
+  "projectStateVersion": 35,
+  "summary": "Improve the existing Smart Salon landing page to look modern, clean, and premium (dark theme with gold accents), focusing only on booking/scheduling/management; remove all rewards/coins/gamification references; do not reuse the previously provided paragraph and instead write new short clean website copy; ensure correct use of the provided logo in the header; refine spacing/alignment/typography; include a clean mobile app preview in the hero; update features to 3–4 cards including Service Discovery; keep mobile responsiveness and minimal layout. Additionally, update footer Contact details (email + phone) and create new Privacy Policy and Terms content/pages (Privacy Policy inspired by the shared page, Terms drafted appropriately). Domain direction updated: user selected custom domain \"smartsalonapp.com\" (instead of smartsalon.com) for a public, app-friendly URL. Add a new section to the landing page titled \"About App\" with the exact provided text describing Smart Salon as a modern salon booking and management app for customers and salon owners.",
   "architectural_notes": [
     "Layout: use 80% centered content width (not full-bleed) to keep content in the middle.",
     "Grid: set column gutters to 2.5 to increase spacing between columns.",
@@ -14,9 +14,7 @@
     "Copy: do not reuse the previously provided paragraph verbatim; write new short, clean landing-page copy.",
     "Branding: use the provided app logo (no replacements); keep it sharp, undistorted, with proper padding/spacing in the header."
   ],
-  "known_issues": [
-    "User reports the current icp0.io public URL is not opening in Chrome (\"Canister ID Not Resolved\" / potential icp0 vs icpO confusion). Needs resolution or alternative public URL via custom domain."
-  ],
+  "known_issues": [],
   "isFixRequest": true,
   "existing_features": [
     {
@@ -346,6 +344,38 @@
         "REQ-44"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-new-section-to-the-landing-page-titled-about-app-that-displays-the-exact-text-smart-salon-is-a-modern-salon-booking-and-management-app-designed-for-customers-and-salon-owners-it-allows-users-to-book-appointments-manage-services-and-streamline-salon-operations-efficiently",
+      "title": "Add a new section to the landing page titled \"About App\" that displays the exact text: \"Smart Salon is a modern salon booking and management app designed for customers and salon owners. It allows users to book appointments, manage services, and streamline salon operations efficiently.\"",
+      "reqIds": [
+        "REQ-46"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-get-started-button-in-the-hero-section-fully-clickable-and-functional-on-click-display-a-simple-app-coming-soon-message-modal-toast-or-alert-or-redirect-to-a-placeholder-page-ensure-the-button-is-not-blocked-by-any-overlaying-elements-verify-z-index-and-pointer-events-are-correctly-set",
+      "title": "Make the \"Get Started\" button in the hero section fully clickable and functional: on click, display a simple \"App Coming Soon\" message (modal, toast, or alert) OR redirect to a placeholder page; ensure the button is not blocked by any overlaying elements (verify z-index and pointer-events are correctly set).",
+      "reqIds": [
+        "REQ-47"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-specified-button-styling-to-the-get-started-button-background-color-d4af37-gold-white-text-medium-border-radius-and-a-soft-shadow-ensure-the-styling-is-consistent-and-visually-premium",
+      "title": "Apply the specified button styling to the \"Get Started\" button: background color #D4AF37 (gold), white text, medium border radius, and a soft shadow; ensure the styling is consistent and visually premium.",
+      "reqIds": [
+        "REQ-48"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-smooth-interaction-animations-to-the-get-started-button-on-hover-the-button-should-slightly-scale-up-e-g-scale-1-05-on-click-add-a-small-press-down-animation-e-g-brief-scale-reduction-ensure-animations-are-smooth-subtle-and-mobile-friendly",
+      "title": "Add smooth interaction animations to the \"Get Started\" button: on hover, the button should slightly scale up (e.g., scale 1.05); on click, add a small press-down animation (e.g., brief scale reduction); ensure animations are smooth, subtle, and mobile-friendly.",
+      "reqIds": [
+        "REQ-49"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -471,6 +501,18 @@
       "reqIds": [
         "REQ-45"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Add a new section to the landing page titled \"About App\" that displays the exact provided text: \"Smart Salon is a modern salon booking and management app designed for customers and salon owners. It allows users to book appointments, manage services, and streamline salon operations efficiently.\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Make the \"Get Started\" button functional: on click show a simple \"App Coming Soon\" message or redirect to a placeholder page; ensure no elements block it (z-index/pointer events); add hover scale and click press animation; use button style #D4AF37 background, white text, medium border radius, soft shadow; keep simple and mobile-friendly.",
+      "reqIds": [],
       "status": "pending"
     }
   ],

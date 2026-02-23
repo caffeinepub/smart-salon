@@ -1,52 +1,75 @@
 {
   "kind": "build_request",
-  "title": "Provide new deployed landing page URL and finalize domain-linked public URL",
-  "projectName": "Smart Salon",
+  "title": "Make Get Started button functional with App Coming Soon interaction",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-44",
-      "text": "Deploy the latest Smart Salon landing page build (the user-referenced “new version”) to the Internet Computer and provide the new public landing page URL(s) for preview.",
-      "target": "unknown",
-      "source": {
-        "messageIds": [
-          "recent-messages-3"
-        ],
-        "quotes": [
-          "yes & give me my new landing page url as well"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A fresh deployment of the current frontend is published and reachable over HTTPS.",
-        "The final public landing page URL(s) are captured as output/artifacts for handoff (at minimum the custom domain URL https://smartsalonapp.com, plus any canister gateway URL if available).",
-        "The provided URL(s) open successfully in Chrome without “Error 400 — Canister ID Not Resolved”."
-      ]
-    },
-    {
-      "id": "REQ-45",
-      "text": "Update frontend/DEPLOYMENT.md so the “Public URLs for Mobile App” section is complete and explicitly lists the final public landing page URL(s), with https://smartsalonapp.com as the Primary URL.",
+      "id": "REQ-47",
+      "text": "Make the \"Get Started\" button in the hero section fully clickable and functional: on click, display a simple \"App Coming Soon\" message (modal, toast, or alert) OR redirect to a placeholder page; ensure the button is not blocked by any overlaying elements (verify z-index and pointer-events are correctly set).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-3"
+          "msg-latest"
         ],
         "quotes": [
-          "yes & give me my new landing page url as well"
+          "The button should be clickable and functional. On click: Show a simple message \"App Coming Soon\" OR redirect to a placeholder page. Do NOT leave the button inactive.",
+          "Ensure no element is blocking the button (z-index issue). Make sure pointer events are enabled."
         ]
       },
       "acceptanceCriteria": [
-        "frontend/DEPLOYMENT.md includes a filled-in Primary URL set to https://smartsalonapp.com.",
-        "frontend/DEPLOYMENT.md includes any additional relevant URL(s) (e.g., a canister-based URL) if available, clearly labeled and copy-pasteable.",
-        "Documentation does not hardcode a canister URL into any user-facing branding/marketing copy; it is only listed as a technical access URL."
+        "Clicking the \"Get Started\" button triggers a visible \"App Coming Soon\" message or navigates to a placeholder page",
+        "The button is not blocked by any other UI elements (z-index and pointer-events are correct)",
+        "The interaction works consistently on desktop and mobile devices"
+      ]
+    },
+    {
+      "id": "REQ-48",
+      "text": "Apply the specified button styling to the \"Get Started\" button: background color #D4AF37 (gold), white text, medium border radius, and a soft shadow; ensure the styling is consistent and visually premium.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Button style: Background: #D4AF37, Text: White, Border radius: Medium, Shadow: Soft shadow"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Button background is #D4AF37",
+        "Button text is white",
+        "Button has medium border radius and soft shadow",
+        "Styling matches the premium dark theme of the landing page"
+      ]
+    },
+    {
+      "id": "REQ-49",
+      "text": "Add smooth interaction animations to the \"Get Started\" button: on hover, the button should slightly scale up (e.g., scale 1.05); on click, add a small press-down animation (e.g., brief scale reduction); ensure animations are smooth, subtle, and mobile-friendly.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add hover effect and smooth click animation. Add a simple interaction: On hover → slightly scale up, On click → small press animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Button scales up slightly on hover (smooth transition)",
+        "Button shows a small press animation on click",
+        "Animations work correctly on both desktop and mobile devices",
+        "Animations are subtle and do not negatively impact usability"
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT."
+    "Keep the solution simple and clean; do not add complex navigation",
+    "Ensure the button interaction is mobile-friendly",
+    "This is a temporary action until the app is live; do not over-engineer"
   ],
   "nonGoals": [
-    "Do not change landing page design, copy, or section structure beyond what is required to deploy and to document/provide the new URL(s).",
-    "Do not introduce new backend features or data models."
+    "Implementing full navigation system",
+    "Adding backend integration for the button action",
+    "Creating multiple placeholder pages"
   ],
   "imageRequirements": {
     "required": [],

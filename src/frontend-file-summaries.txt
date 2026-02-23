@@ -1,8 +1,8 @@
 {
   "frontend/src/index.css": "Global styles with dark luxury OKLCH theme tokens, improved typography hierarchy with letter-spacing for headings and paragraphs, and text-balance utility for premium readability.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with additional border radius (3xl) and spacing utilities to support premium design system.",
-  "frontend/src/App.tsx": "Root application component that renders the LandingPage with dark mode enabled.",
-  "frontend/src/pages/LandingPage.tsx": "Premium landing page with single user-uploaded logo in header, longer hero text lines using text-balance utility, improved vertical spacing throughout CTA and footer sections with cleaner grid layout, enhanced bottom bar separation, and URL-encoded appIdentifier for UTM tracking.",
+  "frontend/src/App.tsx": "Root application component that renders the LandingPage with dark mode enabled and includes the Toaster component for global toast notifications.",
+  "frontend/src/pages/LandingPage.tsx": "Premium landing page with header, hero section, About App section, platform overview, features grid, how-it-works steps, CTA section, footer with legal modals, and social links; all three \"Get Started\" buttons now have gold styling (#D4AF37), smooth hover/click animations, proper z-index, and trigger an \"App Coming Soon\" toast notification on click.",
   "frontend/index.html": "HTML entry point with brand-focused title \"Smart Salon\", domain-agnostic SEO meta description, canonical link and Open Graph URL meta tags pointing to https://smartsalonapp.com/, and favicon/icon references.",
   "frontend/DEPLOYMENT.md": "Comprehensive deployment guide with complete public URLs section listing https://smartsalonapp.com as primary URL, https://www.smartsalonapp.com as alternative, and a placeholder for technical canister URL, plus full custom domain setup instructions, DNS configuration, verification steps, troubleshooting guide, and deployment checklist.",
   "frontend/src/content/legal.ts": "Shared constants for contact information (email, phone) and company details used across all legal/contact views.",
