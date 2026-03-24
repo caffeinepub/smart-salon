@@ -3,80 +3,85 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --radius: 0.75rem;
-        /* Dark luxury theme colors */
-        --background: 0.08 0.02 240; /* #0B0F19 dark blue-black */
-        --foreground: 1 0 0; /* #FFFFFF white */
-        --card: 0.12 0.02 240;
-        --card-foreground: 1 0 0;
-        --popover: 0.12 0.02 240;
-        --popover-foreground: 1 0 0;
-        --primary: 0.75 0.15 85; /* #D4AF37 gold */
-        --primary-foreground: 0.08 0.02 240;
-        --secondary: 0.20 0.02 240;
-        --secondary-foreground: 1 0 0;
-        --muted: 0.18 0.02 240;
-        --muted-foreground: 0.70 0.01 240; /* #B0B3B8 light grey */
-        --accent: 0.75 0.15 85; /* gold accent */
-        --accent-foreground: 0.08 0.02 240;
-        --destructive: 0.55 0.20 25;
-        --destructive-foreground: 1 0 0;
-        --border: 0.20 0.02 240;
-        --input: 0.20 0.02 240;
-        --ring: 0.75 0.15 85;
-        --chart-1: 0.65 0.15 200;
-        --chart-2: 0.70 0.15 150;
-        --chart-3: 0.60 0.15 100;
-        --chart-4: 0.75 0.15 50;
-        --chart-5: 0.55 0.15 300;
-        --sidebar: 0.10 0.02 240;
-        --sidebar-foreground: 0.95 0 0;
-        --sidebar-primary: 0.75 0.15 85;
-        --sidebar-primary-foreground: 0.08 0.02 240;
-        --sidebar-accent: 0.18 0.02 240;
-        --sidebar-accent-foreground: 0.95 0 0;
-        --sidebar-border: 0.20 0.02 240;
-        --sidebar-ring: 0.75 0.15 85;
-    }
+  :root {
+    --radius: 0.75rem;
+    /* Dark luxury theme colors */
+    --background: 0.08 0.02 240; /* #0B0F19 dark blue-black */
+    --foreground: 1 0 0; /* #FFFFFF white */
+    --card: 0.12 0.02 240;
+    --card-foreground: 1 0 0;
+    --popover: 0.12 0.02 240;
+    --popover-foreground: 1 0 0;
+    --primary: 0.75 0.15 85; /* #D4AF37 gold */
+    --primary-foreground: 0.08 0.02 240;
+    --secondary: 0.2 0.02 240;
+    --secondary-foreground: 1 0 0;
+    --muted: 0.18 0.02 240;
+    --muted-foreground: 0.7 0.01 240; /* #B0B3B8 light grey */
+    --accent: 0.75 0.15 85; /* gold accent */
+    --accent-foreground: 0.08 0.02 240;
+    --destructive: 0.55 0.2 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.2 0.02 240;
+    --input: 0.2 0.02 240;
+    --ring: 0.75 0.15 85;
+    --chart-1: 0.65 0.15 200;
+    --chart-2: 0.7 0.15 150;
+    --chart-3: 0.6 0.15 100;
+    --chart-4: 0.75 0.15 50;
+    --chart-5: 0.55 0.15 300;
+    --sidebar: 0.1 0.02 240;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.75 0.15 85;
+    --sidebar-primary-foreground: 0.08 0.02 240;
+    --sidebar-accent: 0.18 0.02 240;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.2 0.02 240;
+    --sidebar-ring: 0.75 0.15 85;
+  }
 
-    * {
-        @apply border-border;
-    }
+  * {
+    @apply border-border;
+  }
 
-    body {
-        @apply bg-background text-foreground;
-        font-feature-settings: "rlig" 1, "calt" 1;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-bold;
-        letter-spacing: -0.02em;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    letter-spacing: -0.02em;
+  }
 
-    h1 {
-        @apply text-4xl md:text-5xl lg:text-6xl;
-    }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
 
-    h2 {
-        @apply text-3xl md:text-4xl lg:text-5xl;
-    }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
 
-    h3 {
-        @apply text-2xl md:text-3xl;
-    }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
 
-    p {
-        letter-spacing: -0.01em;
-    }
+  p {
+    letter-spacing: -0.01em;
+  }
 }
 
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+  .text-balance {
+    text-wrap: balance;
+  }
 }

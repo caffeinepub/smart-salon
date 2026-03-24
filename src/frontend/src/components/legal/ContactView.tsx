@@ -1,5 +1,5 @@
-import { Mail, Phone } from 'lucide-react';
-import { CONTACT_INFO } from '@/content/legal';
+import { CONTACT_INFO } from "@/content/legal";
+import { Mail, Phone } from "lucide-react";
 
 export function ContactView() {
   return (
@@ -7,7 +7,8 @@ export function ContactView() {
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-foreground">Get in Touch</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Have questions or need assistance? We're here to help! Reach out to us through any of the following channels:
+          Have questions or need assistance? We're here to help! Reach out to us
+          through any of the following channels:
         </p>
       </div>
 
@@ -53,8 +54,9 @@ export function ContactView() {
 
       <div className="pt-4 border-t border-border/50">
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Whether you're a customer looking to book an appointment or a salon owner interested in our platform, 
-          we're excited to hear from you. Our team is dedicated to providing the best experience possible.
+          Whether you're a customer looking to book an appointment or a salon
+          owner interested in our platform, we're excited to hear from you. Our
+          team is dedicated to providing the best experience possible.
         </p>
       </div>
     </div>
