@@ -42,6 +42,13 @@ export default function LandingPage() {
     window.open(PLAY_STORE_URL, "_blank", "noopener,noreferrer");
   };
 
+  const handleViewFeatures = () => {
+    const featuresSection = document.getElementById("features");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -100,7 +107,8 @@ export default function LandingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-primary/30 text-foreground hover:bg-primary/10 px-8 py-6 text-lg rounded-xl"
+                  onClick={handleViewFeatures}
+                  className="border-primary/30 text-foreground hover:bg-primary/10 px-8 py-6 text-lg rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   View Features
                 </Button>
@@ -144,7 +152,10 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+      <section
+        id="features"
+        className="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-transparent via-primary/5 to-transparent"
+      >
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -389,7 +400,7 @@ export default function LandingPage() {
                   <SiFacebook className="w-5 h-5 text-primary" />
                 </a>
                 <a
-                  href="https://smartsalonapp.com"
+                  href="https://www.instagram.com/smartsalonhq/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors"
